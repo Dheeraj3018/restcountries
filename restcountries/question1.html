@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+   function objectsEqual(obj1, obj2) {
+  // Convert the JSON objects to strings and sort them
+  const sortedStr1 = JSON.stringify(obj1, Object.keys(obj1).sort());
+  const sortedStr2 = JSON.stringify(obj2, Object.keys(obj2).sort());
+
+  // Compare the sorted strings
+  return sortedStr1 === sortedStr2;
+}
+
+
+const obj1 = { name: "Person 1", age: 5 };
+const obj2 = { age: 5, name: "Person 1" };
+
+const isEqual = objectsEqual(obj1, obj2);
+console.log(isEqual); 
+
+
+
+
+    </script>
+</body>
+</html>

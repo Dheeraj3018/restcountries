@@ -7,21 +7,8 @@
     <title>Document</title>
 </head>
 <body>
-    <script>
-let request  = new XMLHttpRequest();
-request.open('GET','https://restcountries.com/v3.1/all',true)
-request.send();
-request.onload = function () { 
- let data = JSON.parse(request.response)
- console.log(data)
-data.filter((element)=>{
-for (let key in element.flags){
-    if(element.flags[key].countries="flags"){
-        console.log(element.flags.png)
-    }
-}
-        })
-    }
+    <script src="script.js">
+
 
     </script>
 </body>
